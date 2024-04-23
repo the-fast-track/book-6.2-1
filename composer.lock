@@ -4,8 +4,191 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "60a06536595a8d16890f3024c3de1982",
+    "content-hash": "cba34ad4d180f836906e607d414852f1",
     "packages": [
+        {
+            "name": "blackfire/php-sdk",
+            "version": "v1.35.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blackfireio/php-sdk.git",
+                "reference": "2c5950ff2ad29c2af96c69810eb304f0f350177d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blackfireio/php-sdk/zipball/2c5950ff2ad29c2af96c69810eb304f0f350177d",
+                "reference": "2c5950ff2ad29c2af96c69810eb304f0f350177d",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0",
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "behat/behat": "^3.8",
+                "friends-of-behat/mink-browserkit-driver": "^1.4",
+                "friends-of-behat/mink-extension": "^2.5",
+                "guzzlehttp/psr7": "^1.6",
+                "illuminate/console": "^8.81",
+                "illuminate/queue": "^8.81",
+                "illuminate/support": "^8.81",
+                "laravel/octane": "^1.2",
+                "phpunit/phpunit": "^9.5",
+                "psr/http-message": "^1.0",
+                "symfony/browser-kit": "^5.1",
+                "symfony/framework-bundle": "^5.1",
+                "symfony/http-client": "^5.1",
+                "symfony/messenger": "^5.1",
+                "symfony/panther": "^1.0",
+                "symfony/phpunit-bridge": "^5.2"
+            },
+            "suggest": {
+                "ext-blackfire": "The C version of the Blackfire probe",
+                "ext-zlib": "To push config to remote profiling targets",
+                "symfony/panther": "To use Symfony web test cases with Blackfire"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.36-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/autostart.php"
+                ],
+                "psr-4": {
+                    "Blackfire\\": "src/Blackfire"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Blackfire.io",
+                    "email": "support@blackfire.io"
+                }
+            ],
+            "description": "Blackfire.io PHP SDK",
+            "keywords": [
+                "performance",
+                "profiler",
+                "uprofiler",
+                "xhprof"
+            ],
+            "support": {
+                "issues": "https://github.com/blackfireio/php-sdk/issues",
+                "source": "https://github.com/blackfireio/php-sdk/tree/v1.35.0"
+            },
+            "time": "2023-04-06T09:37:28+00:00"
+        },
+        {
+            "name": "blackfireio/blackfire-symfony-meta",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blackfireio/blackfire-symfony-meta.git",
+                "reference": "80d76c704e963b5e5bef95599bacdd9f00138636"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blackfireio/blackfire-symfony-meta/zipball/80d76c704e963b5e5bef95599bacdd9f00138636",
+                "reference": "80d76c704e963b5e5bef95599bacdd9f00138636",
+                "shasum": ""
+            },
+            "require": {
+                "blackfire/php-sdk": "^1.26"
+            },
+            "type": "metapackage",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A PHP package to easily integrate Blackfire into a Symfony application",
+            "support": {
+                "issues": "https://github.com/blackfireio/blackfire-symfony-meta/issues",
+                "source": "https://github.com/blackfireio/blackfire-symfony-meta/tree/v1.0.0"
+            },
+            "time": "2021-08-31T06:27:59+00:00"
+        },
+        {
+            "name": "composer/ca-bundle",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/ca-bundle.git",
+                "reference": "0c5ccfcfea312b5c5a190a21ac5cef93f74baf99"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/0c5ccfcfea312b5c5a190a21ac5cef93f74baf99",
+                "reference": "0c5ccfcfea312b5c5a190a21ac5cef93f74baf99",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "ext-pcre": "*",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.10",
+                "psr/log": "^1.0",
+                "symfony/phpunit-bridge": "^4.2 || ^5",
+                "symfony/process": "^4.0 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\CaBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
+            "keywords": [
+                "cabundle",
+                "cacert",
+                "certificate",
+                "ssl",
+                "tls"
+            ],
+            "support": {
+                "irc": "irc://irc.freenode.org/composer",
+                "issues": "https://github.com/composer/ca-bundle/issues",
+                "source": "https://github.com/composer/ca-bundle/tree/1.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-03-15T14:00:32+00:00"
+        },
         {
             "name": "composer/semver",
             "version": "3.4.0",
@@ -7263,6 +7446,38 @@
                 }
             ],
             "time": "2024-01-23T14:51:35+00:00"
+        },
+        {
+            "name": "symfonycorp/platformsh-meta",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfonycorp/platformsh-meta.git",
+                "reference": "3e8559c75ed759921015cc7ebf5952c306afcaf8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfonycorp/platformsh-meta/zipball/3e8559c75ed759921015cc7ebf5952c306afcaf8",
+                "reference": "3e8559c75ed759921015cc7ebf5952c306afcaf8",
+                "shasum": ""
+            },
+            "type": "metapackage",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A meta package for platformsh projects",
+            "support": {
+                "issues": "https://github.com/symfonycorp/platformsh-meta/issues",
+                "source": "https://github.com/symfonycorp/platformsh-meta/tree/v1.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfonycorp/connect",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-10-20T16:38:02+00:00"
         },
         {
             "name": "twig/extra-bundle",
