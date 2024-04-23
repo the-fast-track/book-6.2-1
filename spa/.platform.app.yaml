@@ -1,0 +1,27 @@
+name: spa
+
+type: nodejs:18
+
+size: S
+
+build:
+    flavor: none
+
+web:
+    commands:
+        start: sleep
+    locations:
+        "/":
+            root: "public"
+            index:
+                - "index.html"
+            scripts: false
+            expires: 10m
+
+hooks:
+    build: |
+        set -x -e
+
+        curl -fs https://get.symfony.com/cloud/configurator | bash
+
+        NODE_VERSION=18 node-build
