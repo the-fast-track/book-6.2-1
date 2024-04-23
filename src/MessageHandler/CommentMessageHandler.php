@@ -49,7 +49,8 @@ class CommentMessageHandler
             $this->entityManager->flush();
             $this->bus->dispatch($message);
         } elseif ($this->commentStateMachine->can($comment, 'publish') || $this->commentStateMachine->can($comment, 'publish_ham')) {
-            $this->notifier->send(new CommentReviewNotification($comment), ...$this->notifier->getAdminRecipients());
+            $notification = new CommentReviewNotification($comment, $message->getReviewUrl());
+            $this->notifier->send($notification, ...$this->notifier->getAdminRecipients());
         } elseif ($this->commentStateMachine->can($comment, 'optimize')) {
             if ($comment->getPhotoFilename()) {
                 $this->imageOptimizer->resize($this->photoDir.'/'.$comment->getPhotoFilename());

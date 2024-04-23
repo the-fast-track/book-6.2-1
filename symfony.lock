@@ -247,6 +247,15 @@
             "config/routes/security.yaml"
         ]
     },
+    "symfony/slack-notifier": {
+        "version": "6.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "5.2",
+            "ref": "8fb9603326990013efbe6d71c2dd78ada316808a"
+        }
+    },
     "symfony/stimulus-bundle": {
         "version": "2.17",
         "recipe": {
