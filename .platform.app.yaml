@@ -35,6 +35,7 @@ web:
 
 mounts:
     "/var": { source: local, source_path: var }
+    "/public/uploads": { source: local, source_path: uploads }
     
 
 relationships:
