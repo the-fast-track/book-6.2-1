@@ -9,6 +9,7 @@ parameters:
     admin_email: "%env(string:default:default_admin_email:ADMIN_EMAIL)%"
     default_base_url: 'http://127.0.0.1'
     router.request_context.base_url: '%env(default:default_base_url:SYMFONY_DEFAULT_ROUTE_URL)%'
+    app.supported_locales: 'en|fr'
 
 services:
     # default configuration for services in *this* file
