@@ -1,8 +1,8 @@
 <head><script defer src="/runtime.js"></script></head>Html Webpack Plugin:
 <pre>
   Error: Child compilation failed:
-  Module not found: Error: Can't resolve '/Users/fabien/Code/github/symfonycorp/  book.symfony.com/guestbook-generated/spa/node_modules/html-webpack-plugin/lib/  loader.js' in '/Users/fabien/Code/github/symfonycorp/book.symfony.com/guestboo  k-generated/spa'
-  ModuleNotFoundError: Module not found: Error: Can't resolve '/Users/fabien/Cod  e/github/symfonycorp/book.symfony.com/guestbook-generated/spa/node_modules/htm  l-webpack-plugin/lib/loader.js' in '/Users/fabien/Code/github/symfonycorp/book  .symfony.com/guestbook-generated/spa'
+  Module not found: Error: Can't resolve '/Users/fabien/Code/github/symfonycorp/  book.symfony.com/guestbook-generated/spa/src/index.ejs' in '/Users/fabien/Code  /github/symfonycorp/book.symfony.com/guestbook-generated/spa'
+  ModuleNotFoundError: Module not found: Error: Can't resolve '/Users/fabien/Cod  e/github/symfonycorp/book.symfony.com/guestbook-generated/spa/src/index.ejs' i  n '/Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-generated/  spa'
       at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/webpack/lib/Compilation.js:2094:28
       at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/webpack/lib/NormalModuleFactory.js:895:13
       at eval (eval at create (/Users/fabien/Code/github/symfonycorp/book.symfon  y.com/guestbook-generated/spa/node_modules/tapable/lib/HookCodeFactory.js:33:1  0), <anonymous>:10:1)
@@ -10,10 +10,11 @@
       at eval (eval at create (/Users/fabien/Code/github/symfonycorp/book.symfon  y.com/guestbook-generated/spa/node_modules/tapable/lib/HookCodeFactory.js:33:1  0), <anonymous>:9:1)
       at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/webpack/lib/NormalModuleFactory.js:509:22
       at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/webpack/lib/NormalModuleFactory.js:155:11
-      at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/webpack/lib/NormalModuleFactory.js:729:23
-      at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/neo-async/async.js:2830:7
-      at done (/Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-  generated/spa/node_modules/neo-async/async.js:2925:13)
-      at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/webpack/lib/NormalModuleFactory.js:1165:23
+      at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/webpack/lib/NormalModuleFactory.js:767:25
+      at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/webpack/lib/NormalModuleFactory.js:979:8
+      at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/webpack/lib/NormalModuleFactory.js:1109:5
+      at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/neo-async/async.js:6883:13
+      at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/webpack/lib/NormalModuleFactory.js:1092:45
       at finishWithoutResolve (/Users/fabien/Code/github/symfonycorp/book.symfon  y.com/guestbook-generated/spa/node_modules/enhanced-resolve/lib/Resolver.js:56  7:11)
       at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/enhanced-resolve/lib/Resolver.js:656:15
       at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/enhanced-resolve/lib/Resolver.js:714:5
@@ -24,7 +25,7 @@
       at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/enhanced-resolve/lib/Resolver.js:714:5
       at eval (eval at create (/Users/fabien/Code/github/symfonycorp/book.symfon  y.com/guestbook-generated/spa/node_modules/tapable/lib/HookCodeFactory.js:33:1  0), <anonymous>:15:1)
       at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/enhanced-resolve/lib/Resolver.js:714:5
-      at eval (eval at create (/Users/fabien/Code/github/symfonycorp/book.symfon  y.com/guestbook-generated/spa/node_modules/tapable/lib/HookCodeFactory.js:33:1  0), <anonymous>:15:1)
+      at eval (eval at create (/Users/fabien/Code/github/symfonycorp/book.symfon  y.com/guestbook-generated/spa/node_modules/tapable/lib/HookCodeFactory.js:33:1  0), <anonymous>:16:1)
       at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/enhanced-resolve/lib/Resolver.js:714:5
       at eval (eval at create (/Users/fabien/Code/github/symfonycorp/book.symfon  y.com/guestbook-generated/spa/node_modules/tapable/lib/HookCodeFactory.js:33:1  0), <anonymous>:16:1)
       at /Users/fabien/Code/github/symfonycorp/book.symfony.com/guestbook-genera  ted/spa/node_modules/enhanced-resolve/lib/Resolver.js:714:5
@@ -54,17 +55,20 @@
   - NormalModuleFactory.js:155 
     [spa]/[webpack]/lib/NormalModuleFactory.js:155:11
   
-  - NormalModuleFactory.js:729 
-    [spa]/[webpack]/lib/NormalModuleFactory.js:729:23
+  - NormalModuleFactory.js:767 
+    [spa]/[webpack]/lib/NormalModuleFactory.js:767:25
   
-  - async.js:2830 
-    [spa]/[neo-async]/async.js:2830:7
+  - NormalModuleFactory.js:979 
+    [spa]/[webpack]/lib/NormalModuleFactory.js:979:8
   
-  - async.js:2925 done
-    [spa]/[neo-async]/async.js:2925:13
+  - NormalModuleFactory.js:1109 
+    [spa]/[webpack]/lib/NormalModuleFactory.js:1109:5
   
-  - NormalModuleFactory.js:1165 
-    [spa]/[webpack]/lib/NormalModuleFactory.js:1165:23
+  - async.js:6883 
+    [spa]/[neo-async]/async.js:6883:13
+  
+  - NormalModuleFactory.js:1092 
+    [spa]/[webpack]/lib/NormalModuleFactory.js:1092:45
   
   - Resolver.js:567 finishWithoutResolve
     [spa]/[enhanced-resolve]/lib/Resolver.js:567:11
@@ -156,6 +160,5 @@
   
   - Compilation.js:500 fn
     [spa]/[webpack]/lib/Compilation.js:500:9
-  
   
 </pre>
