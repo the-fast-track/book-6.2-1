@@ -16,3 +16,6 @@ varnish:
 files:
     type: network-storage:2.0
     disk: 256
+
+rediscache:
+    type: redis:5.0

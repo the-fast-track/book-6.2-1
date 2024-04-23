@@ -14,6 +14,7 @@ runtime:
         - iconv
         - mbstring
         - pdo_pgsql
+        - redis
         - sodium
         - xsl
         
@@ -40,6 +41,7 @@ mounts:
 
 relationships:
     database: "database:postgresql"
+    redis: "rediscache:redis"
     
 hooks:
     build: |
