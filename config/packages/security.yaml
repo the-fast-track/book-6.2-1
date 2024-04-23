@@ -20,6 +20,8 @@ security:
                 login_path: app_login
                 check_path: app_login
                 enable_csrf: true
+            http_basic: { realm: Admin Area }
+            entry_point: form_login
             logout:
                 path: app_logout
                 # where to redirect after logout
