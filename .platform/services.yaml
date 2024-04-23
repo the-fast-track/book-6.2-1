@@ -19,3 +19,8 @@ files:
 
 rediscache:
     type: redis:5.0
+
+queue:
+    type: rabbitmq:3.7
+    disk: 1024
+    size: S
