@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Entity\Comment;
+use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class SpamChecker
@@ -11,7 +12,7 @@ class SpamChecker
 
     public function __construct(
         private HttpClientInterface $client,
-        string $akismetKey,
+        #[Autowire('%env(AKISMET_KEY)%')] string $akismetKey,
     ) {
         $this->endpoint = sprintf('https://%s.rest.akismet.com/1.1/comment-check', $akismetKey);
     }
