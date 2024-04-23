@@ -1,0 +1,5 @@
+/node_modules/
+/public/
+/npm-debug.log
+# used later by Cordova
+/app/
