@@ -61,6 +61,14 @@ crons:
         spec: '50 23 * * *'
         cmd: if [ "$PLATFORM_ENVIRONMENT_TYPE" = "production" ]; then croncape php-security-checker; fi
 
+    comment_cleanup:
+        # Cleanup every night at 11.50 pm (UTC).
+        spec: '50 23 * * *'
+        cmd: |
+            if [ "$PLATFORM_ENVIRONMENT_TYPE" = "production" ]; then
+                croncape symfony console app:comment:cleanup
+            fi
+
 workers:
     messenger:
         commands:
