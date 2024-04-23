@@ -1,4 +1,5 @@
 {
+  "app.css": "/app.css",
   "app.js": "/app.js",
   "runtime.js": "/runtime.js",
   "index.html": "/index.html"

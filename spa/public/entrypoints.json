@@ -4,6 +4,9 @@
       "js": [
         "/runtime.js",
         "/app.js"
+      ],
+      "css": [
+        "/app.css"
       ]
     }
   }
